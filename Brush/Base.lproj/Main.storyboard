@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DrawingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Brush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DrawingVC" customModule="Brush" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +30,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-Av-MlY" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.75523930459999999" blue="0.63702483310000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.00026612686630551365" green="0.43756136254435424" blue="0.79094803333282471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KS6-Ez-9vy"/>
                                             <constraint firstAttribute="width" constant="50" id="kOx-vd-n9W"/>
@@ -40,10 +40,13 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="blueTapped:" destination="BYZ-38-t0r" eventType="touchDragInside" id="e8k-D8-sXt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGB-UQ-pDr" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                         <rect key="frame" x="58.5" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.75686274509803919" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eCV-qu-wLE"/>
                                             <constraint firstAttribute="width" constant="50" id="mMJ-0Y-aEj"/>
@@ -53,10 +56,13 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="greenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgv-KG-EQQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-7s-5c1" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                         <rect key="frame" x="117" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.97490776909722221" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="xbY-UQ-6Df"/>
                                             <constraint firstAttribute="width" constant="50" id="y8K-jX-Ztg"/>
@@ -66,10 +72,13 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="yellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zjO-If-npZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-O8-GgV" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                         <rect key="frame" x="176" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.40690104166666669" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.33496143380149712" blue="0.27509401633099884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="NzH-uF-om0"/>
                                             <constraint firstAttribute="height" constant="50" id="piu-2B-zjF"/>
@@ -79,30 +88,19 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="redTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCs-l5-fFd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auJ-PH-ior" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                         <rect key="frame" x="234.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.8648873730964467" green="0.8648873730964467" blue="0.8648873730964467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="h5o-Ni-LSm"/>
                                             <constraint firstAttribute="height" constant="50" id="jN8-Zf-HP1"/>
                                         </constraints>
                                         <state key="normal" title="R">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-S5-e98" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                        <rect key="frame" x="293" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Yau-au-Leb"/>
-                                            <constraint firstAttribute="height" constant="50" id="k3a-UD-5xL"/>
-                                        </constraints>
-                                        <state key="normal" title="S">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -110,7 +108,26 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="6N5-j0-dTc" kind="show" id="kbP-A0-ZPf"/>
+                                            <action selector="randomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApB-Pr-bpb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-S5-e98" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="293" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.86488737309999997" green="0.86488737309999997" blue="0.86488737309999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Yau-au-Leb"/>
+                                            <constraint firstAttribute="height" constant="50" id="k3a-UD-5xL"/>
+                                        </constraints>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="6N5-j0-dTc" kind="show" identifier="settings" id="kbP-A0-ZPf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,7 +136,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4S4-Vf-wSL"/>
                             <constraint firstItem="DCT-8c-go1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AGH-sK-For"/>
@@ -151,13 +168,46 @@
                     <view key="view" contentMode="scaleToFill" id="Png-pR-lu5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                <rect key="frame" x="135" y="124" width="105" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.75686274509999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="UVk-N5-hrx"/>
+                                    <constraint firstAttribute="height" constant="40" id="g00-ND-VWF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareTapped:" destination="6N5-j0-dTc" eventType="touchUpInside" id="EGf-d6-vIA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FR4-Wd-hGH" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9E2-Jn-Gm3"/>
+                            <constraint firstItem="FR4-Wd-hGH" firstAttribute="top" secondItem="OO4-Sy-sZQ" secondAttribute="bottom" constant="60" id="Qyc-ek-I5F"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a"/>
+                    <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a">
+                        <barButtonItem key="rightBarButtonItem" title="Erace" id="HBa-ou-BpY">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="eraseTapped:" destination="6N5-j0-dTc" id="Eh8-g3-fTZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zq6-4k-cfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="37"/>
+            <point key="canvasLocation" x="1848.8" y="36.431784107946029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ni4-vt-t0J">
@@ -167,6 +217,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9M2-Cw-nkc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
