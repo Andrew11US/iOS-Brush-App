@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoM-BM-whq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,29 +23,159 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIe-Mt-csN">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCT-8c-go1">
-                                <rect key="frame" x="16" y="617" width="343" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DCT-8c-go1">
+                                <rect key="frame" x="16" y="609" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-Av-MlY" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.75523930459999999" blue="0.63702483310000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KS6-Ez-9vy"/>
+                                            <constraint firstAttribute="width" constant="50" id="kOx-vd-n9W"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGB-UQ-pDr" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="58.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eCV-qu-wLE"/>
+                                            <constraint firstAttribute="width" constant="50" id="mMJ-0Y-aEj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-7s-5c1" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="117" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xbY-UQ-6Df"/>
+                                            <constraint firstAttribute="width" constant="50" id="y8K-jX-Ztg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-O8-GgV" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="176" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.40690104166666669" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="NzH-uF-om0"/>
+                                            <constraint firstAttribute="height" constant="50" id="piu-2B-zjF"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auJ-PH-ior" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="234.5" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="h5o-Ni-LSm"/>
+                                            <constraint firstAttribute="height" constant="50" id="jN8-Zf-HP1"/>
+                                        </constraints>
+                                        <state key="normal" title="R">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-S5-e98" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="293" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Yau-au-Leb"/>
+                                            <constraint firstAttribute="height" constant="50" id="k3a-UD-5xL"/>
+                                        </constraints>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="6N5-j0-dTc" kind="show" id="kbP-A0-ZPf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vUE-b3-U3m"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4S4-Vf-wSL"/>
                             <constraint firstItem="DCT-8c-go1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AGH-sK-For"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DCT-8c-go1" secondAttribute="trailing" id="EAg-tN-g2D"/>
                             <constraint firstAttribute="trailing" secondItem="LIe-Mt-csN" secondAttribute="trailing" id="Je4-at-2r9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DCT-8c-go1" secondAttribute="bottom" id="jf9-j4-Kq2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DCT-8c-go1" secondAttribute="bottom" constant="8" id="jf9-j4-Kq2"/>
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGW-2R-ivr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIe-Mt-csN" secondAttribute="bottom" id="wRR-ab-p2B"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8VI-An-Cal"/>
+                    <connections>
+                        <outlet property="buttonsStackView" destination="DCT-8c-go1" id="ura-HO-hxB"/>
+                        <outlet property="imageView" destination="LIe-Mt-csN" id="fQt-Qh-Zoc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Hpd-98-Uwg">
+            <objects>
+                <viewController id="6N5-j0-dTc" customClass="SettingsVC" customModule="Brush" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OO4-Sy-sZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cjy-GU-KWm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Png-pR-lu5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zq6-4k-cfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ni4-vt-t0J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NoM-BM-whq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9M2-Cw-nkc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PcW-Eg-iRn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQl-77-EZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="37"/>
         </scene>
     </scenes>
 </document>
