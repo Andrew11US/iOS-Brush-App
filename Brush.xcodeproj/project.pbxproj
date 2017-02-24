@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2661B37F7A7EB956ED18F63A /* Pods_Brush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06599DD506D923AE205429D8 /* Pods_Brush.framework */; };
 		901829111E4A326B00FDC42B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829101E4A326B00FDC42B /* AppDelegate.swift */; };
 		901829131E4A326B00FDC42B /* DrawingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829121E4A326B00FDC42B /* DrawingVC.swift */; };
 		901829161E4A326C00FDC42B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901829141E4A326C00FDC42B /* Main.storyboard */; };
 		901829181E4A326C00FDC42B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901829171E4A326C00FDC42B /* Assets.xcassets */; };
 		9018291B1E4A326C00FDC42B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901829191E4A326C00FDC42B /* LaunchScreen.storyboard */; };
 		901829231E4A40FB00FDC42B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829221E4A40FB00FDC42B /* UIViewExtension.swift */; };
-		901829251E4A424600FDC42B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829241E4A424600FDC42B /* CustomButton.swift */; };
+		901829251E4A424600FDC42B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829241E4A424600FDC42B /* RoundedButton.swift */; };
 		901829271E4A448900FDC42B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829261E4A448900FDC42B /* SettingsVC.swift */; };
+		906A37AF1E60B7F400FA0AB4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A37AE1E60B7F400FA0AB4 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06599DD506D923AE205429D8 /* Pods_Brush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89927C9D7B718EC4E1376606 /* Pods-Brush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brush/Pods-Brush.debug.xcconfig"; sourceTree = "<group>"; };
 		9018290D1E4A326B00FDC42B /* Brush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		901829101E4A326B00FDC42B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901829121E4A326B00FDC42B /* DrawingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingVC.swift; sourceTree = "<group>"; };
@@ -26,8 +30,11 @@
 		9018291A1E4A326C00FDC42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9018291C1E4A326C00FDC42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		901829221E4A40FB00FDC42B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		901829241E4A424600FDC42B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		901829241E4A424600FDC42B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		901829261E4A448900FDC42B /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		906A37AE1E60B7F400FA0AB4 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		906A37B51E60B8F700FA0AB4 /* Brush-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brush-Bridging-Header.h"; sourceTree = "<group>"; };
+		BAC95C19B6BC0844234AC671 /* Pods-Brush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brush/Pods-Brush.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +42,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2661B37F7A7EB956ED18F63A /* Pods_Brush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		449997A08FF5E1DA3961B192 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06599DD506D923AE205429D8 /* Pods_Brush.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		901829041E4A326B00FDC42B = {
 			isa = PBXGroup;
 			children = (
 				9018290F1E4A326B00FDC42B /* Brush */,
 				9018290E1E4A326B00FDC42B /* Products */,
+				F72887CB2E9EF8B2846553E0 /* Pods */,
+				449997A08FF5E1DA3961B192 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +78,68 @@
 		9018290F1E4A326B00FDC42B /* Brush */ = {
 			isa = PBXGroup;
 			children = (
-				901829101E4A326B00FDC42B /* AppDelegate.swift */,
-				901829121E4A326B00FDC42B /* DrawingVC.swift */,
-				901829261E4A448900FDC42B /* SettingsVC.swift */,
-				901829141E4A326C00FDC42B /* Main.storyboard */,
+				906A37B01E60B80C00FA0AB4 /* UI */,
 				901829171E4A326C00FDC42B /* Assets.xcassets */,
-				901829191E4A326C00FDC42B /* LaunchScreen.storyboard */,
-				9018291C1E4A326C00FDC42B /* Info.plist */,
-				901829221E4A40FB00FDC42B /* UIViewExtension.swift */,
-				901829241E4A424600FDC42B /* CustomButton.swift */,
+				906A37B11E60B81100FA0AB4 /* Controllers */,
+				906A37B41E60B84500FA0AB4 /* Model */,
+				906A37B21E60B81E00FA0AB4 /* Services */,
+				906A37B31E60B82700FA0AB4 /* Support Files */,
 			);
 			path = Brush;
+			sourceTree = "<group>";
+		};
+		906A37B01E60B80C00FA0AB4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				901829191E4A326C00FDC42B /* LaunchScreen.storyboard */,
+				901829141E4A326C00FDC42B /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		906A37B11E60B81100FA0AB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				901829121E4A326B00FDC42B /* DrawingVC.swift */,
+				901829261E4A448900FDC42B /* SettingsVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		906A37B21E60B81E00FA0AB4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				901829221E4A40FB00FDC42B /* UIViewExtension.swift */,
+				901829241E4A424600FDC42B /* RoundedButton.swift */,
+				906A37AE1E60B7F400FA0AB4 /* CustomButton.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		906A37B31E60B82700FA0AB4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				901829101E4A326B00FDC42B /* AppDelegate.swift */,
+				9018291C1E4A326C00FDC42B /* Info.plist */,
+				906A37B51E60B8F700FA0AB4 /* Brush-Bridging-Header.h */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		906A37B41E60B84500FA0AB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F72887CB2E9EF8B2846553E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89927C9D7B718EC4E1376606 /* Pods-Brush.debug.xcconfig */,
+				BAC95C19B6BC0844234AC671 /* Pods-Brush.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9018291F1E4A326C00FDC42B /* Build configuration list for PBXNativeTarget "Brush" */;
 			buildPhases = (
+				6F8A5818F90776A288C70463 /* [CP] Check Pods Manifest.lock */,
 				901829091E4A326B00FDC42B /* Sources */,
 				9018290A1E4A326B00FDC42B /* Frameworks */,
 				9018290B1E4A326B00FDC42B /* Resources */,
+				7FA5C5893D6113CF932A5DC1 /* [CP] Embed Pods Frameworks */,
+				4D1A94889DC3969E0016E89D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -106,6 +178,7 @@
 					9018290C1E4A326B00FDC42B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PTRW36GG78;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -141,13 +214,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D1A94889DC3969E0016E89D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brush/Pods-Brush-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F8A5818F90776A288C70463 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA5C5893D6113CF932A5DC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brush/Pods-Brush-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		901829091E4A326B00FDC42B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				901829251E4A424600FDC42B /* CustomButton.swift in Sources */,
+				901829251E4A424600FDC42B /* RoundedButton.swift in Sources */,
 				901829231E4A40FB00FDC42B /* UIViewExtension.swift in Sources */,
+				906A37AF1E60B7F400FA0AB4 /* CustomButton.swift in Sources */,
 				901829131E4A326B00FDC42B /* DrawingVC.swift in Sources */,
 				901829111E4A326B00FDC42B /* AppDelegate.swift in Sources */,
 				901829271E4A448900FDC42B /* SettingsVC.swift in Sources */,
@@ -271,26 +393,33 @@
 		};
 		901829201E4A326C00FDC42B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89927C9D7B718EC4E1376606 /* Pods-Brush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = Brush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Brush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Brush/Brush-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		901829211E4A326C00FDC42B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAC95C19B6BC0844234AC671 /* Pods-Brush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = Brush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Brush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Brush/Brush-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
