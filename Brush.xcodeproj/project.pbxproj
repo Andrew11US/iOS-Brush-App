@@ -179,7 +179,7 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PTRW36GG78;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -399,9 +399,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = Brush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Brush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.brush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2d9c3bfd-c6cb-4cfc-82f5-3ef70e4ff3ba";
+				PROVISIONING_PROFILE_SPECIFIER = BrushDevProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Brush/Brush-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -414,11 +417,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = Brush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Brush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.brush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb7d9544-84b1-45ec-8cd4-ba605a5335fd";
+				PROVISIONING_PROFILE_SPECIFIER = BrushDistributionProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Brush/Brush-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
