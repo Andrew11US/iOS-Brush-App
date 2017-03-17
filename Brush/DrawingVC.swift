@@ -30,10 +30,9 @@ class DrawingVC: UIViewController {
         self.buttonsStackView.isHidden = false
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {

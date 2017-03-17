@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIe-Mt-csN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIe-Mt-csN">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DCT-8c-go1">
@@ -165,24 +165,27 @@
                         <viewControllerLayoutGuide type="top" id="OO4-Sy-sZQ"/>
                         <viewControllerLayoutGuide type="bottom" id="cjy-GU-KWm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Png-pR-lu5">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Png-pR-lu5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brush2" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IO-FaR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="154.66666666666669" y="124" width="105.00000000000006" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.75686274509999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="107" y="124" width="200" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="UVk-N5-hrx"/>
-                                    <constraint firstAttribute="height" constant="40" id="g00-ND-VWF"/>
+                                    <constraint firstAttribute="width" constant="200" id="UVk-N5-hrx"/>
+                                    <constraint firstAttribute="height" constant="60" id="g00-ND-VWF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                <state key="normal" title="Share Art">
+                                    <color key="titleColor" red="0.0021738072391599417" green="0.74406188726425171" blue="0.65135735273361206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -193,12 +196,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FR4-Wd-hGH" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9E2-Jn-Gm3"/>
+                            <constraint firstItem="dck-IO-FaR" firstAttribute="leading" secondItem="Png-pR-lu5" secondAttribute="leading" id="KRc-Tk-7Gc"/>
                             <constraint firstItem="FR4-Wd-hGH" firstAttribute="top" secondItem="OO4-Sy-sZQ" secondAttribute="bottom" constant="60" id="Qyc-ek-I5F"/>
+                            <constraint firstAttribute="trailing" secondItem="dck-IO-FaR" secondAttribute="trailing" id="UPY-y1-C6V"/>
+                            <constraint firstItem="cjy-GU-KWm" firstAttribute="top" secondItem="dck-IO-FaR" secondAttribute="bottom" id="kmM-XH-DvQ"/>
+                            <constraint firstItem="dck-IO-FaR" firstAttribute="top" secondItem="Png-pR-lu5" secondAttribute="top" id="uA5-Wf-vcw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a">
                         <barButtonItem key="rightBarButtonItem" title="Erace" id="HBa-ou-BpY">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.99515908959999999" green="0.049227981918118814" blue="0.26707420871780113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="eraseTapped:" destination="6N5-j0-dTc" id="Eh8-g3-fTZ"/>
                             </connections>
@@ -207,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zq6-4k-cfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1847.826086956522" y="35.869565217391305"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ni4-vt-t0J">
@@ -230,6 +237,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="brush2" width="1080" height="1920"/>
         <image name="randomColor" width="50" height="50"/>
     </resources>
 </document>
