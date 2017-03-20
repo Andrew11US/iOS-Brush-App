@@ -135,11 +135,22 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vUE-b3-U3m"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical">
+                                    <mask key="constraints">
+                                        <exclude reference="vUE-b3-U3m"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical">
+                                    <mask key="constraints">
+                                        <exclude reference="vUE-b3-U3m"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4S4-Vf-wSL"/>
+                            <constraint firstItem="DCT-8c-go1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="7zU-XB-CqR"/>
                             <constraint firstItem="DCT-8c-go1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="AGH-sK-For"/>
                             <constraint firstAttribute="trailing" secondItem="DCT-8c-go1" secondAttribute="trailing" constant="8" id="EAg-tN-g2D"/>
                             <constraint firstAttribute="trailing" secondItem="LIe-Mt-csN" secondAttribute="trailing" id="Je4-at-2r9"/>
@@ -147,6 +158,23 @@
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGW-2R-ivr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIe-Mt-csN" secondAttribute="bottom" id="wRR-ab-p2B"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7zU-XB-CqR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="7zU-XB-CqR"/>
+                                <exclude reference="EAg-tN-g2D"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="7zU-XB-CqR"/>
+                                <exclude reference="EAg-tN-g2D"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="8VI-An-Cal"/>
                     <connections>
