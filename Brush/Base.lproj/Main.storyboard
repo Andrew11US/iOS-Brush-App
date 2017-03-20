@@ -174,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="107" y="124" width="200" height="60"/>
+                                <rect key="frame" x="107" y="104" width="200" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="UVk-N5-hrx"/>
@@ -194,15 +194,15 @@
                                 </connections>
                             </button>
                             <slider clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="52" minValue="4" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-WQ-q9q">
-                                <rect key="frame" x="18" y="214" width="378" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.99515908959999999" green="0.16735607390000001" blue="0.3943518996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="0.026740099890000001" green="0.52535573069999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="18" y="324" width="378" height="31"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="6N5-j0-dTc" eventType="valueChanged" id="PvA-5b-ITC"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-Kw-krR" customClass="CustomView" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="157" y="274" width="100" height="100"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-Kw-krR" customClass="CustomView" customModule="Brush" customModuleProvider="target">
+                                <rect key="frame" x="157" y="194" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="iUH-Zr-WLj"/>
                                     <constraint firstAttribute="width" constant="100" id="n6f-5j-cYy"/>
@@ -214,7 +214,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-AW-Alc" customClass="CustomView" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="157" y="274" width="100" height="100"/>
+                                <rect key="frame" x="157" y="194" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Wzz-nw-szj"/>
@@ -231,7 +231,6 @@
                         <constraints>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="leading" secondItem="Png-pR-lu5" secondAttribute="leadingMargin" id="0mm-KC-3ca"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerX" secondItem="TOm-Kw-krR" secondAttribute="centerX" id="19n-BO-COg"/>
-                            <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="30" id="1Pd-3c-qJY"/>
                             <constraint firstItem="FR4-Wd-hGH" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9E2-Jn-Gm3"/>
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9j2-xW-t2r"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerY" secondItem="TOm-Kw-krR" secondAttribute="centerY" id="DjR-Lf-kEb"/>
@@ -239,10 +238,11 @@
                             <constraint firstItem="FR4-Wd-hGH" firstAttribute="top" secondItem="OO4-Sy-sZQ" secondAttribute="bottom" constant="60" id="Qyc-ek-I5F">
                                 <variation key="heightClass=compact-widthClass=compact" constant="20"/>
                             </constraint>
-                            <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="lbo-WQ-q9q" secondAttribute="bottom" constant="30" id="Swf-Nr-Kvu"/>
                             <constraint firstAttribute="trailing" secondItem="dck-IO-FaR" secondAttribute="trailing" id="UPY-y1-C6V"/>
+                            <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="30" id="WLn-wx-R5w"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="trailing" secondItem="Png-pR-lu5" secondAttribute="trailingMargin" id="dVq-2I-rNL"/>
                             <constraint firstItem="cjy-GU-KWm" firstAttribute="top" secondItem="dck-IO-FaR" secondAttribute="bottom" id="kmM-XH-DvQ"/>
+                            <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="TOm-Kw-krR" secondAttribute="bottom" constant="30" id="la4-xn-FaL"/>
                             <constraint firstItem="dck-IO-FaR" firstAttribute="top" secondItem="Png-pR-lu5" secondAttribute="top" id="uA5-Wf-vcw"/>
                         </constraints>
                     </view>
@@ -254,6 +254,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="brushSize" destination="Yl6-AW-Alc" id="Agk-ZM-h9b"/>
                         <outlet property="height" destination="Wzz-nw-szj" id="yRS-W7-KKQ"/>
