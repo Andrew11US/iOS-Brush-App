@@ -16,6 +16,8 @@
 		901829231E4A40FB00FDC42B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829221E4A40FB00FDC42B /* UIViewExtension.swift */; };
 		901829251E4A424600FDC42B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829241E4A424600FDC42B /* RoundedButton.swift */; };
 		901829271E4A448900FDC42B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901829261E4A448900FDC42B /* SettingsVC.swift */; };
+		9068F9C41E80054F00105428 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9068F9C31E80054F00105428 /* GlobalData.swift */; };
+		9068F9C61E800A4A00105428 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9068F9C51E800A4A00105428 /* CustomView.swift */; };
 		906A37AF1E60B7F400FA0AB4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A37AE1E60B7F400FA0AB4 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		901829221E4A40FB00FDC42B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		901829241E4A424600FDC42B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		901829261E4A448900FDC42B /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		9068F9C31E80054F00105428 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		9068F9C51E800A4A00105428 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		906A37AE1E60B7F400FA0AB4 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		906A37B51E60B8F700FA0AB4 /* Brush-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brush-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAC95C19B6BC0844234AC671 /* Pods-Brush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brush/Pods-Brush.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				901829221E4A40FB00FDC42B /* UIViewExtension.swift */,
 				901829241E4A424600FDC42B /* RoundedButton.swift */,
 				906A37AE1E60B7F400FA0AB4 /* CustomButton.swift */,
+				9068F9C51E800A4A00105428 /* CustomView.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		906A37B41E60B84500FA0AB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9068F9C31E80054F00105428 /* GlobalData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -268,9 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				901829251E4A424600FDC42B /* RoundedButton.swift in Sources */,
+				9068F9C61E800A4A00105428 /* CustomView.swift in Sources */,
 				901829231E4A40FB00FDC42B /* UIViewExtension.swift in Sources */,
 				906A37AF1E60B7F400FA0AB4 /* CustomButton.swift in Sources */,
 				901829131E4A326B00FDC42B /* DrawingVC.swift in Sources */,
+				9068F9C41E80054F00105428 /* GlobalData.swift in Sources */,
 				901829111E4A326B00FDC42B /* AppDelegate.swift in Sources */,
 				901829271E4A448900FDC42B /* SettingsVC.swift in Sources */,
 			);
