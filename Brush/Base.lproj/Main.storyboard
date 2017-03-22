@@ -254,6 +254,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSV-8z-VA5">
+                                <rect key="frame" x="206.66666666666666" y="164" width="2" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="H5S-Py-vUo"/>
+                                    <constraint firstAttribute="width" constant="2" id="rY1-41-fQa"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -269,9 +276,11 @@
                             <constraint firstAttribute="trailing" secondItem="dck-IO-FaR" secondAttribute="trailing" id="UPY-y1-C6V"/>
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="30" id="WLn-wx-R5w"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="trailing" secondItem="Png-pR-lu5" secondAttribute="trailingMargin" id="dVq-2I-rNL"/>
+                            <constraint firstItem="CSV-8z-VA5" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" id="iy3-kL-sor"/>
                             <constraint firstItem="cjy-GU-KWm" firstAttribute="top" secondItem="dck-IO-FaR" secondAttribute="bottom" id="kmM-XH-DvQ"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="TOm-Kw-krR" secondAttribute="bottom" constant="30" id="la4-xn-FaL"/>
                             <constraint firstItem="dck-IO-FaR" firstAttribute="top" secondItem="Png-pR-lu5" secondAttribute="top" id="uA5-Wf-vcw"/>
+                            <constraint firstItem="CSV-8z-VA5" firstAttribute="centerX" secondItem="FR4-Wd-hGH" secondAttribute="centerX" id="ueh-rb-Jda"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a">
@@ -284,6 +293,7 @@
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="activityViewBase" destination="CSV-8z-VA5" id="mru-JJ-ig5"/>
                         <outlet property="brushSize" destination="Yl6-AW-Alc" id="Agk-ZM-h9b"/>
                         <outlet property="height" destination="Wzz-nw-szj" id="yRS-W7-KKQ"/>
                         <outlet property="slider" destination="lbo-WQ-q9q" id="zxb-wd-QQP"/>

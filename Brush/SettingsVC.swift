@@ -14,6 +14,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var height: NSLayoutConstraint!
     @IBOutlet weak var width: NSLayoutConstraint!
     @IBOutlet weak var brushSize: CustomView!
+    @IBOutlet weak var activityViewBase: UIView!
     
     weak var drawingVC : DrawingVC? = nil
     
@@ -35,9 +36,19 @@ class SettingsVC: UIViewController {
     @IBAction func shareTapped(_ sender: AnyObject) {
         
         if let image = self.drawingVC?.imageView.image {
-            let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            
+            let objectsToShare = [image]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            // iPad Activity VC popUp
+            if let popActivityVC = activityVC.popoverPresentationController {
+                popActivityVC.sourceView = activityViewBase
+            }
+            
             self.present(activityVC, animated: true, completion: nil)
         }
+        
+
     }
     
     @IBAction func sliderChanged(_ sender: Any) {
