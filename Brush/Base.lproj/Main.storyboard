@@ -198,10 +198,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brush2" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IO-FaR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brush4" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IO-FaR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-6A-Gz3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                 <rect key="frame" x="107" y="104" width="200" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -210,7 +214,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
                                 <state key="normal" title="Share Art">
-                                    <color key="titleColor" red="0.0021738072391599417" green="0.74406188726425171" blue="0.65135735273361206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.49585193395614624" green="0.10195273905992508" blue="0.0054349605925381184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -221,7 +225,7 @@
                                     <action selector="shareTapped:" destination="6N5-j0-dTc" eventType="touchUpInside" id="EGf-d6-vIA"/>
                                 </connections>
                             </button>
-                            <slider clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="52" minValue="4" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-WQ-q9q">
+                            <slider clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="52" minValue="4" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-WQ-q9q">
                                 <rect key="frame" x="18" y="324" width="378" height="31"/>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,7 +245,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-AW-Alc" customClass="CustomView" customModule="Brush" customModuleProvider="target">
+                            <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-AW-Alc" customClass="CustomView" customModule="Brush" customModuleProvider="target">
                                 <rect key="frame" x="157" y="194" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -264,8 +268,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="height" secondItem="dck-IO-FaR" secondAttribute="height" id="0Fi-am-wBv"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="leading" secondItem="Png-pR-lu5" secondAttribute="leadingMargin" id="0mm-KC-3ca"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerX" secondItem="TOm-Kw-krR" secondAttribute="centerX" id="19n-BO-COg"/>
+                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="centerX" secondItem="dck-IO-FaR" secondAttribute="centerX" id="3SI-PS-8Z2"/>
                             <constraint firstItem="FR4-Wd-hGH" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9E2-Jn-Gm3"/>
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9j2-xW-t2r"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerY" secondItem="TOm-Kw-krR" secondAttribute="centerY" id="DjR-Lf-kEb"/>
@@ -275,17 +281,19 @@
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="dck-IO-FaR" secondAttribute="trailing" id="UPY-y1-C6V"/>
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="30" id="WLn-wx-R5w"/>
+                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="width" secondItem="dck-IO-FaR" secondAttribute="width" id="XwQ-gI-CAJ"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="trailing" secondItem="Png-pR-lu5" secondAttribute="trailingMargin" id="dVq-2I-rNL"/>
                             <constraint firstItem="CSV-8z-VA5" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" id="iy3-kL-sor"/>
                             <constraint firstItem="cjy-GU-KWm" firstAttribute="top" secondItem="dck-IO-FaR" secondAttribute="bottom" id="kmM-XH-DvQ"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="TOm-Kw-krR" secondAttribute="bottom" constant="30" id="la4-xn-FaL"/>
                             <constraint firstItem="dck-IO-FaR" firstAttribute="top" secondItem="Png-pR-lu5" secondAttribute="top" id="uA5-Wf-vcw"/>
                             <constraint firstItem="CSV-8z-VA5" firstAttribute="centerX" secondItem="FR4-Wd-hGH" secondAttribute="centerX" id="ueh-rb-Jda"/>
+                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="centerY" secondItem="dck-IO-FaR" secondAttribute="centerY" id="v13-3U-Rf1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a">
                         <barButtonItem key="rightBarButtonItem" title="Erace" id="HBa-ou-BpY">
-                            <color key="tintColor" red="0.99515908959999999" green="0.049227981918118814" blue="0.26707420871780113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="eraseTapped:" destination="6N5-j0-dTc" id="Eh8-g3-fTZ"/>
                             </connections>
@@ -309,7 +317,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NoM-BM-whq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9M2-Cw-nkc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="9M2-Cw-nkc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -325,7 +333,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brush2" width="1080" height="1920"/>
+        <image name="brush4" width="1080" height="1920"/>
         <image name="randomColor" width="50" height="50"/>
     </resources>
 </document>
