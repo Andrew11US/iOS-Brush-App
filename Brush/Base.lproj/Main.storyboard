@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoM-BM-whq">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoM-BM-whq">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIe-Mt-csN">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DCT-8c-go1">
-                                <rect key="frame" x="8" y="678" width="398" height="50"/>
+                                <rect key="frame" x="8" y="609" width="359" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-Av-MlY" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-Av-MlY" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.00026612686630551365" green="0.43756136254435424" blue="0.79094803333282471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.14117647058823529" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KS6-Ez-9vy"/>
                                             <constraint firstAttribute="width" constant="50" id="kOx-vd-n9W"/>
@@ -41,12 +41,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="blueTapped:" destination="BYZ-38-t0r" eventType="touchDragInside" id="e8k-D8-sXt"/>
+                                            <action selector="redTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msF-dx-0LS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGB-UQ-pDr" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                        <rect key="frame" x="69.666666666666671" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.75686274509803919" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGB-UQ-pDr" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="62" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.11764705882352941" green="0.53333333333333333" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eCV-qu-wLE"/>
                                             <constraint firstAttribute="width" constant="50" id="mMJ-0Y-aEj"/>
@@ -57,12 +57,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="greenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgv-KG-EQQ"/>
+                                            <action selector="blueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUX-Pe-EHv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-7s-5c1" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                        <rect key="frame" x="139.33333333333334" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.97490776909722221" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-7s-5c1" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="123.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.90196078431372551" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="xbY-UQ-6Df"/>
                                             <constraint firstAttribute="width" constant="50" id="y8K-jX-Ztg"/>
@@ -73,12 +73,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="yellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zjO-If-npZ"/>
+                                            <action selector="greenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpb-wm-K3r"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-O8-GgV" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                        <rect key="frame" x="208.66666666666669" y="0.0" width="50.000000000000057" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.33496143380149712" blue="0.27509401633099884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-O8-GgV" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="185.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="NzH-uF-om0"/>
                                             <constraint firstAttribute="height" constant="50" id="piu-2B-zjF"/>
@@ -89,17 +89,17 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="redTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCs-l5-fFd"/>
+                                            <action selector="yellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRe-EU-B6m"/>
                                         </connections>
                                     </button>
-                                    <button clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auJ-PH-ior" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                        <rect key="frame" x="278.33333333333331" y="0.0" width="50" height="50"/>
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auJ-PH-ior" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="247" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="h5o-Ni-LSm"/>
                                             <constraint firstAttribute="height" constant="50" id="jN8-Zf-HP1"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="randomColor">
+                                        <state key="normal" backgroundImage="erase">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -111,15 +111,15 @@
                                             <action selector="randomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApB-Pr-bpb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-S5-e98" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                        <rect key="frame" x="348" y="0.0" width="50" height="50"/>
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-S5-e98" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                        <rect key="frame" x="309" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Yau-au-Leb"/>
                                             <constraint firstAttribute="height" constant="50" id="k3a-UD-5xL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
-                                        <state key="normal" title="S">
+                                        <state key="normal" backgroundImage="settings">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -151,10 +151,16 @@
                         <constraints>
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4S4-Vf-wSL"/>
                             <constraint firstItem="DCT-8c-go1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="7zU-XB-CqR"/>
-                            <constraint firstItem="DCT-8c-go1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="AGH-sK-For"/>
-                            <constraint firstAttribute="trailing" secondItem="DCT-8c-go1" secondAttribute="trailing" constant="8" id="EAg-tN-g2D"/>
+                            <constraint firstItem="DCT-8c-go1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="AGH-sK-For">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="DCT-8c-go1" secondAttribute="trailing" constant="8" id="EAg-tN-g2D">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="LIe-Mt-csN" secondAttribute="trailing" id="Je4-at-2r9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DCT-8c-go1" secondAttribute="bottom" constant="8" id="jf9-j4-Kq2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DCT-8c-go1" secondAttribute="bottom" constant="8" id="jf9-j4-Kq2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                            </constraint>
                             <constraint firstItem="LIe-Mt-csN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGW-2R-ivr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIe-Mt-csN" secondAttribute="bottom" id="wRR-ab-p2B"/>
                         </constraints>
@@ -195,38 +201,38 @@
                         <viewControllerLayoutGuide type="bottom" id="cjy-GU-KWm"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Png-pR-lu5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brush4" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IO-FaR">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IO-FaR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-6A-Gz3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-6A-Gz3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.2627450980392157" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="107" y="104" width="200" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="74" width="160" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="UVk-N5-hrx"/>
+                                    <constraint firstAttribute="width" constant="160" id="UVk-N5-hrx"/>
                                     <constraint firstAttribute="height" constant="60" id="g00-ND-VWF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
-                                <state key="normal" title="Share Art">
-                                    <color key="titleColor" red="0.49585193395614624" green="0.10195273905992508" blue="0.0054349605925381184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.24313725489999999" green="0.26274509800000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="shareTapped:" destination="6N5-j0-dTc" eventType="touchUpInside" id="EGf-d6-vIA"/>
                                 </connections>
                             </button>
-                            <slider clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="52" minValue="4" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-WQ-q9q">
-                                <rect key="frame" x="18" y="324" width="378" height="31"/>
+                            <slider clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="52" minValue="4" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-WQ-q9q">
+                                <rect key="frame" x="14" y="264" width="347" height="31"/>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -234,7 +240,7 @@
                                 </connections>
                             </slider>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-Kw-krR" customClass="CustomView" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="157" y="194" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="149" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="iUH-Zr-WLj"/>
                                     <constraint firstAttribute="width" constant="100" id="n6f-5j-cYy"/>
@@ -245,8 +251,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-AW-Alc" customClass="CustomView" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="157" y="194" width="100" height="100"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-AW-Alc" customClass="CustomView" customModule="Brush" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="149" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Wzz-nw-szj"/>
@@ -259,7 +265,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSV-8z-VA5">
-                                <rect key="frame" x="206.66666666666666" y="164" width="2" height="2"/>
+                                <rect key="frame" x="187" y="134" width="2" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="H5S-Py-vUo"/>
                                     <constraint firstAttribute="width" constant="2" id="rY1-41-fQa"/>
@@ -276,23 +282,23 @@
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9j2-xW-t2r"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerY" secondItem="TOm-Kw-krR" secondAttribute="centerY" id="DjR-Lf-kEb"/>
                             <constraint firstItem="dck-IO-FaR" firstAttribute="leading" secondItem="Png-pR-lu5" secondAttribute="leading" id="KRc-Tk-7Gc"/>
-                            <constraint firstItem="FR4-Wd-hGH" firstAttribute="top" secondItem="OO4-Sy-sZQ" secondAttribute="bottom" constant="60" id="Qyc-ek-I5F">
+                            <constraint firstItem="FR4-Wd-hGH" firstAttribute="top" secondItem="OO4-Sy-sZQ" secondAttribute="bottom" constant="30" id="Qyc-ek-I5F">
                                 <variation key="heightClass=compact-widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="dck-IO-FaR" secondAttribute="trailing" id="UPY-y1-C6V"/>
-                            <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="30" id="WLn-wx-R5w"/>
+                            <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="15" id="WLn-wx-R5w"/>
                             <constraint firstItem="sFP-6A-Gz3" firstAttribute="width" secondItem="dck-IO-FaR" secondAttribute="width" id="XwQ-gI-CAJ"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="trailing" secondItem="Png-pR-lu5" secondAttribute="trailingMargin" id="dVq-2I-rNL"/>
                             <constraint firstItem="CSV-8z-VA5" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" id="iy3-kL-sor"/>
                             <constraint firstItem="cjy-GU-KWm" firstAttribute="top" secondItem="dck-IO-FaR" secondAttribute="bottom" id="kmM-XH-DvQ"/>
-                            <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="TOm-Kw-krR" secondAttribute="bottom" constant="30" id="la4-xn-FaL"/>
+                            <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="TOm-Kw-krR" secondAttribute="bottom" constant="15" id="la4-xn-FaL"/>
                             <constraint firstItem="dck-IO-FaR" firstAttribute="top" secondItem="Png-pR-lu5" secondAttribute="top" id="uA5-Wf-vcw"/>
                             <constraint firstItem="CSV-8z-VA5" firstAttribute="centerX" secondItem="FR4-Wd-hGH" secondAttribute="centerX" id="ueh-rb-Jda"/>
                             <constraint firstItem="sFP-6A-Gz3" firstAttribute="centerY" secondItem="dck-IO-FaR" secondAttribute="centerY" id="v13-3U-Rf1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a">
-                        <barButtonItem key="rightBarButtonItem" title="Erace" id="HBa-ou-BpY">
+                        <barButtonItem key="rightBarButtonItem" title="Erace" style="done" id="HBa-ou-BpY">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="eraseTapped:" destination="6N5-j0-dTc" id="Eh8-g3-fTZ"/>
@@ -317,7 +323,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NoM-BM-whq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="9M2-Cw-nkc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="9M2-Cw-nkc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -333,7 +339,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brush4" width="1080" height="1920"/>
-        <image name="randomColor" width="50" height="50"/>
+        <image name="bg" width="5184" height="3456"/>
+        <image name="erase" width="150" height="150"/>
+        <image name="settings" width="150" height="150"/>
     </resources>
 </document>

@@ -102,29 +102,33 @@ class DrawingVC: UIViewController {
     }
     
     @IBAction func blueTapped(_ sender: CustomButton) {
-        self.red = 0 / 255
-        self.green = 112 / 255
-        self.blue = 202 / 255
+        self.red = 30 / 255
+        self.green = 136 / 255
+        self.blue = 229 / 255
     }
     @IBAction func greenTapped(_ sender: CustomButton) {
         self.red = 0 / 255
-        self.green = 193 / 255
-        self.blue = 162 / 255
+        self.green = 230 / 255
+        self.blue = 118 / 255
     }
     @IBAction func redTapped(_ sender: CustomButton) {
         self.red = 255 / 255
-        self.green = 85 / 255
-        self.blue = 70 / 255
+        self.green = 36 / 255
+        self.blue = 57 / 255
     }
     @IBAction func yellowTapped(_ sender: CustomButton) {
         self.red = 255 / 255
-        self.green = 249 / 255
-        self.blue = 0 / 255
+        self.green = 238 / 255
+        self.blue = 88 / 255
     }
     @IBAction func randomTapped(_ sender: CustomButton) {
-        self.red = CGFloat(arc4random_uniform(256)) / 255
-        self.green = CGFloat(arc4random_uniform(256)) / 255
-        self.blue = CGFloat(arc4random_uniform(256)) / 255
+//        self.red = CGFloat(arc4random_uniform(256)) / 255
+//        self.green = CGFloat(arc4random_uniform(256)) / 255
+//        self.blue = CGFloat(arc4random_uniform(256)) / 255
+        
+        self.red = 255 / 255
+        self.green = 255 / 255
+        self.blue = 255 / 255
     }
 
 }
