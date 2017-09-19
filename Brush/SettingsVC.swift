@@ -26,6 +26,10 @@ class SettingsVC: UIViewController {
         updateConstraintForBrush()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     @IBAction func eraseTapped(_ sender: AnyObject) {
         
         self.drawingVC?.eraseDraw()

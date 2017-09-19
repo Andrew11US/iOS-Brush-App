@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoM-BM-whq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoM-BM-whq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -128,7 +129,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="6N5-j0-dTc" kind="show" identifier="settings" id="kbP-A0-ZPf"/>
+                                            <segue destination="6N5-j0-dTc" kind="show" identifier="settings" id="kbP-A0-ZPf">
+                                                <segue key="commit" inheritsFrom="parent" id="k6d-wd-KES"/>
+                                                <segue key="preview" inheritsFrom="commit" id="qHE-8K-eLH"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -195,7 +199,7 @@
         <!--Settings-->
         <scene sceneID="Hpd-98-Uwg">
             <objects>
-                <viewController id="6N5-j0-dTc" customClass="SettingsVC" customModule="Brush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" id="6N5-j0-dTc" customClass="SettingsVC" customModule="Brush" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OO4-Sy-sZQ"/>
                         <viewControllerLayoutGuide type="bottom" id="cjy-GU-KWm"/>
@@ -207,32 +211,35 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IO-FaR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-6A-Gz3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.24313725490196078" green="0.2627450980392157" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR4-Wd-hGH" customClass="CustomButton" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="107.5" y="74" width="160" height="60"/>
+                                <rect key="frame" x="127.5" y="74" width="120" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="UVk-N5-hrx"/>
-                                    <constraint firstAttribute="height" constant="60" id="g00-ND-VWF"/>
+                                    <constraint firstAttribute="width" constant="120" id="UVk-N5-hrx">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="g00-ND-VWF">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                 <state key="normal" title="Share">
-                                    <color key="titleColor" red="0.24313725489999999" green="0.26274509800000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.28035047650337219" green="0.40138384699821472" blue="0.67526298761367798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="33"/>
+                                </variation>
                                 <connections>
                                     <action selector="shareTapped:" destination="6N5-j0-dTc" eventType="touchUpInside" id="EGf-d6-vIA"/>
                                 </connections>
                             </button>
                             <slider clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="52" minValue="4" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-WQ-q9q">
-                                <rect key="frame" x="14" y="264" width="347" height="31"/>
+                                <rect key="frame" x="14" y="254" width="347" height="31"/>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -240,7 +247,7 @@
                                 </connections>
                             </slider>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-Kw-krR" customClass="CustomView" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="149" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="139" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="iUH-Zr-WLj"/>
                                     <constraint firstAttribute="width" constant="100" id="n6f-5j-cYy"/>
@@ -252,7 +259,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-AW-Alc" customClass="CustomView" customModule="Brush" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="149" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="139" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Wzz-nw-szj"/>
@@ -265,7 +272,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSV-8z-VA5">
-                                <rect key="frame" x="187" y="134" width="2" height="2"/>
+                                <rect key="frame" x="187" y="124" width="2" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="H5S-Py-vUo"/>
                                     <constraint firstAttribute="width" constant="2" id="rY1-41-fQa"/>
@@ -274,10 +281,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="height" secondItem="dck-IO-FaR" secondAttribute="height" id="0Fi-am-wBv"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="leading" secondItem="Png-pR-lu5" secondAttribute="leadingMargin" id="0mm-KC-3ca"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerX" secondItem="TOm-Kw-krR" secondAttribute="centerX" id="19n-BO-COg"/>
-                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="centerX" secondItem="dck-IO-FaR" secondAttribute="centerX" id="3SI-PS-8Z2"/>
                             <constraint firstItem="FR4-Wd-hGH" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9E2-Jn-Gm3"/>
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="centerX" secondItem="Png-pR-lu5" secondAttribute="centerX" id="9j2-xW-t2r"/>
                             <constraint firstItem="Yl6-AW-Alc" firstAttribute="centerY" secondItem="TOm-Kw-krR" secondAttribute="centerY" id="DjR-Lf-kEb"/>
@@ -287,14 +292,12 @@
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="dck-IO-FaR" secondAttribute="trailing" id="UPY-y1-C6V"/>
                             <constraint firstItem="TOm-Kw-krR" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" constant="15" id="WLn-wx-R5w"/>
-                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="width" secondItem="dck-IO-FaR" secondAttribute="width" id="XwQ-gI-CAJ"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="trailing" secondItem="Png-pR-lu5" secondAttribute="trailingMargin" id="dVq-2I-rNL"/>
                             <constraint firstItem="CSV-8z-VA5" firstAttribute="top" secondItem="FR4-Wd-hGH" secondAttribute="bottom" id="iy3-kL-sor"/>
                             <constraint firstItem="cjy-GU-KWm" firstAttribute="top" secondItem="dck-IO-FaR" secondAttribute="bottom" id="kmM-XH-DvQ"/>
                             <constraint firstItem="lbo-WQ-q9q" firstAttribute="top" secondItem="TOm-Kw-krR" secondAttribute="bottom" constant="15" id="la4-xn-FaL"/>
                             <constraint firstItem="dck-IO-FaR" firstAttribute="top" secondItem="Png-pR-lu5" secondAttribute="top" id="uA5-Wf-vcw"/>
                             <constraint firstItem="CSV-8z-VA5" firstAttribute="centerX" secondItem="FR4-Wd-hGH" secondAttribute="centerX" id="ueh-rb-Jda"/>
-                            <constraint firstItem="sFP-6A-Gz3" firstAttribute="centerY" secondItem="dck-IO-FaR" secondAttribute="centerY" id="v13-3U-Rf1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="u50-HL-g5a">
@@ -339,8 +342,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="5184" height="3456"/>
+        <image name="bg" width="2048" height="2732"/>
         <image name="erase" width="150" height="150"/>
         <image name="settings" width="150" height="150"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kbP-A0-ZPf"/>
+    </inferredMetricsTieBreakers>
 </document>

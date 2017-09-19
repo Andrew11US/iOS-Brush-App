@@ -8,6 +8,7 @@
 
 import UIKit
 import pop
+import AudioToolbox.AudioServices
 
 @IBDesignable
 class CustomButton: UIButton {
@@ -40,6 +41,9 @@ class CustomButton: UIButton {
         self.addTarget(self, action: #selector(CustomButton.scaleToSmall), for: .touchDragEnter)
         self.addTarget(self, action: #selector(CustomButton.scaleAnimation), for: .touchUpInside)
         self.addTarget(self, action: #selector(CustomButton.scaleDefault), for: .touchDragExit)
+        self.addTarget(self, action: #selector(CustomButton.scaleDefault), for: .touchCancel)
+        
+        self.addTarget(self, action: #selector(CustomButton.generateFeedback), for: .touchUpInside)
     }
     
     func scaleToSmall() {
@@ -55,7 +59,7 @@ class CustomButton: UIButton {
         let scaleAnim = POPSpringAnimation(propertyNamed: kPOPLayerScaleXY)
         scaleAnim?.velocity = NSValue(cgPoint: CGPoint(x: 3.0, y: 3.0))
         scaleAnim?.toValue = NSValue(cgPoint: CGPoint(x: 1.0, y: 1.0))
-        scaleAnim?.springBounciness = 18.0
+        scaleAnim?.springBounciness = 10.0
         self.layer.pop_add(scaleAnim, forKey: "LayerScaleSmallAnimation")
         
     }
@@ -65,6 +69,14 @@ class CustomButton: UIButton {
         let scaleAnim = POPBasicAnimation(propertyNamed: kPOPLayerScaleXY)
         scaleAnim?.toValue = NSValue(cgSize: CGSize(width: 1, height: 1))
         self.layer.pop_add(scaleAnim, forKey: "LayerScaleSmallAnimation")
+    }
+    
+    func generateFeedback() {
+//        let generator = UINotificationFeedbackGenerator()
+//        generator.notificationOccurred(.success)
+        
+        let peek = SystemSoundID(1519)
+        AudioServicesPlaySystemSound(peek)
     }
     
 }

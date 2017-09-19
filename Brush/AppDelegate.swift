@@ -40,7 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        if shortcutItem.type == "com.losAngelesBoy.brush.settings" {
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Settings")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
+        }
+    }
 
 }
 
