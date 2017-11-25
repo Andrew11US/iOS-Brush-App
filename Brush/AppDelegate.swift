@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         return true
     }
 
@@ -43,15 +43,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
-        if shortcutItem.type == "com.losAngelesBoy.brush.settings" {
-            
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Settings")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-            
-        }
+//        if shortcutItem.type == "com.losAngelesBoy.brush.settings" {
+//            
+//            self.window = UIWindow(frame: UIScreen.main.bounds)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Settings")
+//            self.window?.rootViewController?.navigationController?.isToolbarHidden = false
+//            self.window?.rootViewController = initialViewController
+//            self.window?.makeKeyAndVisible()
+//            
+//        }
     }
 
 }

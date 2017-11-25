@@ -26,7 +26,7 @@ class DrawingVC: UIViewController {
         blueTapped(CustomButton())
     }
 
-    func appBecameActive() {
+    @objc func appBecameActive() {
         self.buttonsStackView.isHidden = false
     }
     
