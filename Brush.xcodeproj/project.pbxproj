@@ -425,8 +425,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.brush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00eb3ec1-d7f5-4dfb-a409-e60181525dd3";
-				PROVISIONING_PROFILE_SPECIFIER = BrushDevProfile;
+				PROVISIONING_PROFILE = "cf2d361d-6459-4b91-923f-f310b99424f1";
+				PROVISIONING_PROFILE_SPECIFIER = BrushDevelopmentProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Brush/Brush-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -448,7 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.brush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4ee39bab-664c-4f6e-a2cf-86f180aa1d65";
+				PROVISIONING_PROFILE = "91c920c6-8364-482d-9b2c-d43eedd9965f";
 				PROVISIONING_PROFILE_SPECIFIER = BrushDistributionProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Brush/Brush-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
