@@ -6,5 +6,6 @@ target 'Brush' do
   use_frameworks!
 
   pod 'pop', '~> 1.0'
+  pod 'SwiftLint'
 
 end

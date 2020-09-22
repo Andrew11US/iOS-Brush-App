@@ -9,20 +9,21 @@
 import UIKit
 
 class DrawingVC: UIViewController {
-
     @IBOutlet weak var buttonsStackView: UIStackView!
     @IBOutlet weak var imageView: UIImageView!
     
     var lastPoint = CGPoint.zero
-    var red : CGFloat = 0.0
-    var green : CGFloat = 0.0
-    var blue : CGFloat = 0.0
+    var red: CGFloat = 0.0
+    var green: CGFloat = 0.0
+    var blue: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(DrawingVC.appBecameActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-        
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(DrawingVC.appBecameActive),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil)
         blueTapped(CustomButton())
     }
 
@@ -31,6 +32,7 @@ class DrawingVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         self.navigationController?.isNavigationBarHidden = true
     }
     
@@ -43,7 +45,7 @@ class DrawingVC: UIViewController {
         
         self.buttonsStackView.isHidden = true
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let point = touch.location(in: self.imageView)
@@ -53,54 +55,47 @@ class DrawingVC: UIViewController {
             
             self.lastPoint = point
         }
-        
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let point = touch.location(in: self.imageView)
             print(point)
-            
             drawBetweenPoints(self.lastPoint, secondPoint: point)
         }
-        
-        
         self.buttonsStackView.isHidden = false
     }
-    
-    func drawBetweenPoints(_ firstPoint:CGPoint, secondPoint:CGPoint) {
-        
+
+    func drawBetweenPoints(_ firstPoint: CGPoint, secondPoint: CGPoint) {
         UIGraphicsBeginImageContext(self.imageView.frame.size)
         let context = UIGraphicsGetCurrentContext()
-        
-        self.imageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.imageView.frame.size.width, height: self.imageView.frame.size.height))
-        
+        self.imageView.image?.draw(in: CGRect(x: 0,
+            y: 0,
+            width: self.imageView.frame.size.width,
+            height: self.imageView.frame.size.height))
         context?.move(to: CGPoint(x: firstPoint.x, y: firstPoint.y))
         context?.addLine(to: CGPoint(x: secondPoint.x, y: secondPoint.y))
-        
         //randomTapped(UIButton())
         context?.setStrokeColor(red: self.red, green: self.green, blue: self.blue, alpha: 1.0)
         context?.setLineCap(.round)
         context?.setLineWidth(CGFloat(lineWidth))
-        
         context?.strokePath()
-        
         self.imageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        
         UIGraphicsEndImageContext()
     }
-    
+
     func eraseDraw() {
         self.imageView.image = nil
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "settings" {
-            let settingsVC = segue.destination as! SettingsVC
-            settingsVC.drawingVC = self
+            if let settingsVC = segue.destination as? SettingsVC {
+                settingsVC.drawingVC = self
+            }
         }
     }
-    
+
     @IBAction func blueTapped(_ sender: CustomButton) {
         self.red = 30 / 255
         self.green = 136 / 255
@@ -122,14 +117,8 @@ class DrawingVC: UIViewController {
         self.blue = 88 / 255
     }
     @IBAction func randomTapped(_ sender: CustomButton) {
-//        self.red = CGFloat(arc4random_uniform(256)) / 255
-//        self.green = CGFloat(arc4random_uniform(256)) / 255
-//        self.blue = CGFloat(arc4random_uniform(256)) / 255
-        
         self.red = 255 / 255
         self.green = 255 / 255
         self.blue = 255 / 255
     }
-
 }
-
